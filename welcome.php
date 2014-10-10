@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("http://104.131.3.156/","root","Sandman1","test");
+$con=mysqli_connect("localhost","root","Sandman1","test");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
