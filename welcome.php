@@ -9,9 +9,9 @@ if (mysqli_connect_errno()) {
 $name = mysqli_real_escape_string($con, $_POST['name']);
 $tip = mysqli_real_escape_string($con, $_POST['tip']);
 $description = mysqli_real_escape_string($con, $_POST['description']);
-$location = mysqli_real_escape_string($con, $_POST['locaiton']);
+$location = mysqli_real_escape_string($con, $_POST['location']);
 
-$sql="INSERT INTO tips (username, tip, description, locaiton)
+$sql="INSERT INTO tips (username, tip, description, location)
 VALUES ('$name', '$tip', '$description', '$location')";
 
 if (!mysqli_query($con,$sql)) {
