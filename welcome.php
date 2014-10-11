@@ -21,7 +21,7 @@ if (!mysqli_query($con,$sql)) {
 echo "1 record added";
 
 $result = mysqli_query($con,"SELECT * FROM tips1
-WHERE type='event'");
+WHERE type=$type");
 
 while($row = mysqli_fetch_array($result)) {
   echo $row['tip'] . " " . $row['description'] ." " . $row['name'] ." " . $row['location'];
