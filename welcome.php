@@ -6,7 +6,7 @@ if (mysqli_connect_errno()) {
 }
 
 // escape variables for security
-$name = mysqli_real_escape_string($con, $_POST['name']);
+$name = mysqli_real_escape_string($con, $_POST['uname']);
 $tip = mysqli_real_escape_string($con, $_POST['tip']);
 $description = mysqli_real_escape_string($con, $_POST['description']);
 $location = mysqli_real_escape_string($con, $_POST['location']);
@@ -31,7 +31,7 @@ echo "<table border='0'>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
   echo"<tr>";
-  echo "<td>" . $row['tip'] . "</td>" . "<td>" . $row['description'] ."</td>" . "<td>" . $row['name'] ."</td>" . "<td>" . $row['location'] . "</td>";
+  echo "<td>" . $row['tip'] . "</td>" . "<td>" . $row['description'] ."</td>" . "<td>" . $row['username'] . "</td>" . "<td>" . $row['location'] . "</td>";
   echo"</tr>";
 }
 
