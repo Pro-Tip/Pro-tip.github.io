@@ -10,6 +10,7 @@ $name = mysqli_real_escape_string($con, $_POST['name']);
 $tip = mysqli_real_escape_string($con, $_POST['tip']);
 $description = mysqli_real_escape_string($con, $_POST['description']);
 $location = mysqli_real_escape_string($con, $_POST['location']);
+$type = mysqli_real_escape_string($con, $_POST['type']);
 
 $sql="INSERT INTO tips1 (username, tip, description, location, type)
 VALUES ('$name', '$tip', '$description', '$location', '$type')";
