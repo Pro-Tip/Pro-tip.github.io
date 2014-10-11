@@ -18,14 +18,20 @@ VALUES ('$name', '$tip', '$description', '$location', '$type')";
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
 }
-echo "1 record added";
+echo "Thanks for the tip! <br>";
 
 $result = mysqli_query($con,"SELECT * FROM tips1
 WHERE type='$type'");
-
+echo "<table border='0'>
+<tr>
+<th>Tip</th>
+<th>Description</th>
+<th>User</th>
+<th>Location</th>
+</tr>";
 while($row = mysqli_fetch_array($result)) {
-  echo $row['tip'] . " " . $row['description'] ." " . $row['name'] ." " . $row['location'];
-  echo "<br>";
+  echo"<tr>";
+  echo "<td>" . $row['tip'] . "</td>" . "<td>" . $row['description'] ."</td>" . "<td>" . $row['name'] ."</td>" . "<td>" . $row['location'] . "</td>";
 }
 
 mysqli_close($con);
