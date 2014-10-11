@@ -7,10 +7,6 @@ if (mysqli_connect_errno()) {
 
 $post_id = mysqli_real_escape_string($con, $_GET['id']);
 
-if (!mysqli_query($con,$sql)) {
-  die('Error: ' . mysqli_error($con));
-}
-
 $result = mysqli_query($con,"SELECT * FROM tips1
 WHERE id='$post_id'");
 echo "<table border='0'>
