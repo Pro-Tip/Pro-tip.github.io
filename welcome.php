@@ -32,6 +32,7 @@ echo "<table border='0'>
 while($row = mysqli_fetch_array($result)) {
   echo"<tr>";
   echo "<td>" . $row['tip'] . "</td>" . "<td>" . $row['description'] ."</td>" . "<td>" . $row['name'] ."</td>" . "<td>" . $row['location'] . "</td>";
+  echo"</tr>";
 }
 
 mysqli_close($con);
