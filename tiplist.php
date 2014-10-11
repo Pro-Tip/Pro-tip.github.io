@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <?php
 $con=mysqli_connect("localhost","root","Sandman1","test");
 // Check connection
@@ -5,24 +8,12 @@ if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 
-// escape variables for security
-$name = mysqli_real_escape_string($con, $_POST['uname']);
-$tip = mysqli_real_escape_string($con, $_POST['tip']);
-$description = mysqli_real_escape_string($con, $_POST['description']);
-$location = mysqli_real_escape_string($con, $_POST['location']);
-$type = mysqli_real_escape_string($con, $_POST['type']);
-$post_id = mysqli_real_escape_string($con, $_GET['id']);
-
-$sql="INSERT INTO tips1 (username, tip, description, location, type)
-VALUES ('$name', '$tip', '$description', '$location', '$type')";
-
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
 }
 echo "Thanks for the tip! <br>";
 
-$result = mysqli_query($con,"SELECT * FROM tips1
-WHERE id='$post_id'");
+$result = mysqli_query($con,"SELECT * FROM tips1");
 echo "<table border='0'>
 <tr>
 <th>Tip</th>
@@ -38,3 +29,15 @@ while($row = mysqli_fetch_array($result)) {
 
 mysqli_close($con);
 ?>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
