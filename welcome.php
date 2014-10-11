@@ -11,8 +11,8 @@ $tip = mysqli_real_escape_string($con, $_POST['tip']);
 $description = mysqli_real_escape_string($con, $_POST['description']);
 $location = mysqli_real_escape_string($con, $_POST['location']);
 
-$sql="INSERT INTO tips (username, tip, description, location)
-VALUES ('$name', '$tip', '$description', '$location')";
+$sql="INSERT INTO tips1 (username, tip, description, location, type)
+VALUES ('$name', '$tip', '$description', '$location', '$type')";
 
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
