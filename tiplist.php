@@ -12,13 +12,11 @@ $result = mysqli_query($con,"SELECT * FROM tips1");
 echo "<table border='0'>
 <tr>
 <th>Tip</th>
-<th>Description</th>
-<th>User</th>
 <th>Location</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
   echo"<tr>";
-  echo "<td>" . $row['tip'] . "</td>" . "<td>" . $row['description'] ."</td>" . "<td>" . $row['username'] . "</td>" . "<td>" . $row['location'] . "</td>";
+  echo "<td><a href=tips.php?id=".$row['id'].">" . $row['tip']."</a>" . "</td>". "<td>" . $row['location'] . "</td>";
   echo"</tr>";
 }
 
