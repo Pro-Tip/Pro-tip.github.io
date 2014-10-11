@@ -11,6 +11,7 @@ $tip = mysqli_real_escape_string($con, $_POST['tip']);
 $description = mysqli_real_escape_string($con, $_POST['description']);
 $location = mysqli_real_escape_string($con, $_POST['location']);
 $type = mysqli_real_escape_string($con, $_POST['type']);
+$post_id = mysqli_real_escape_string($con, $_GET['id']);
 
 $sql="INSERT INTO tips1 (username, tip, description, location, type)
 VALUES ('$name', '$tip', '$description', '$location', '$type')";
@@ -21,7 +22,7 @@ if (!mysqli_query($con,$sql)) {
 echo "Thanks for the tip! <br>";
 
 $result = mysqli_query($con,"SELECT * FROM tips1
-WHERE type='$type'");
+WHERE id='$post_id'");
 echo "<table border='0'>
 <tr>
 <th>Tip</th>
