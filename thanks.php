@@ -15,15 +15,14 @@ $type = mysqli_real_escape_string($con, $_POST['type']);
 $sql="INSERT INTO tips1 (username, tip, description, location, type)
 VALUES ('$name', '$tip', '$description', '$location', '$type')";
 
-$id = mysqli_real_query($con,"SELECT * FROM tips1 WHERE name='$name' AND tip='$tip' AND description='$description' AND location='$location' AND type='$type'");
+$result = mysqli_real_query($con,"SELECT * FROM tips1 WHERE name='$name'");
 
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
 }
 echo "Thanks for the tip! <br>";
-while($row = mysqli_fetch_array($id)) {
+while($row = mysqli_fetch_array($result)) {
     echo "Share your tip with <a href=tips.php?id=".$row['id'].">this link</a>";
-
 }
 
 
