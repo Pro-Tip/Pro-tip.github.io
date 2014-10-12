@@ -19,7 +19,7 @@ if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
 }
 echo "Thanks for the tip! <br>";
-
+echo "Share your tip with <a href=tips.php?id=".$row['id'].">this link</a>";
 
 mysqli_close($con);
 ?>

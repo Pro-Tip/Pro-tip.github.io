@@ -16,7 +16,7 @@ echo "<table border='0'>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
   echo"<tr>";
-  echo "<td><a href=tips.php?id=".$row['id'].">" . $row['tip']."</a>" . "</td>". "<td>" . $row['location'] . "</td>";
+  echo"<td><a href=tips.php?id=".$row['id'].">" . $row['tip']."</a>" . "</td>". "<td>" . $row['location'] . "</td>";
   echo"</tr>";
 }
 
