@@ -15,7 +15,7 @@ $type = mysqli_real_escape_string($con, $_POST['type']);
 $sql="INSERT INTO tips1 (username, tip, description, location, type)
 VALUES ('$name', '$tip', '$description', '$location', '$type')";
 
-$id = mysqli_real_escape_string($con, $_GET['id']);
+$id = mysqli_real_query($con,"SELECT id FROM tips1 WHERE name='$name' AND tip='$tip' AND description='$description' AND location='$location' AND type='$type');
 
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
