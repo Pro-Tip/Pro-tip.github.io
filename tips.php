@@ -20,6 +20,7 @@ while($row = mysqli_fetch_array($result)) {
   echo"<tr>";
   echo "<td>" . $row['tip'] . "</td>" . "<td>" . $row['description'] ."</td>" . "<td>" . $row['username'] . "</td>" . "<td>" . $row['location'] . "</td>";
   echo"</tr>";
+    echo"<p>Share this <a href=tips.php?id=".$row['id'].">Tip</a></p>"
 }
 
 mysqli_close($con);
