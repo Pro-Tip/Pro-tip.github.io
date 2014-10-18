@@ -4,7 +4,7 @@ $con=mysqli_connect("localhost","root","Sandman1","test");
 if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-echo"<head>Pro-Tip</head>";
+echo"<title>Pro-Tip</title>";
 $post_id = mysqli_real_escape_string($con, $_GET['id']);
 
 $result = mysqli_query($con,"SELECT * FROM tips1
