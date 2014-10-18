@@ -1,3 +1,4 @@
+<html><head><title>Pro-Tip</title></head><body>
 <?php
 $con=mysqli_connect("localhost","root","Sandman1","test");
 // Check connection
@@ -9,7 +10,7 @@ $post_id = mysqli_real_escape_string($con, $_GET['id']);
 
 $result = mysqli_query($con,"SELECT * FROM tips1
 WHERE id='$post_id'");
-echo "<html><title>Pro-Tip</title><body><table border='0'>
+echo "<table border='0'>
 <tr>
 <th>Tip</th>
 <th>Description</th>
@@ -22,8 +23,11 @@ while($row = mysqli_fetch_array($result)) {
   echo"</tr>";
 }
 
+$pageTitle = 'Title of Page';
+
 echo"<a href='https://twitter.com/share' class='twitter-share-button' data-text='Added a Tip on @Pro-TipApp' data-via='MohnJoosemiller'>Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></body></html>";
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>";
 
 mysqli_close($con);
 ?>
+</body></html>
