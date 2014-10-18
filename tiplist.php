@@ -9,7 +9,7 @@ if (mysqli_connect_errno()) {
 }
 
 $result = mysqli_query($con,"SELECT * FROM tips1");
-echo "<table border='0' width = ""100%"">
+echo "<table border='0' width = \"100%\">
 <tr>
 <th>Tip</th>
 <th>Location</th>
