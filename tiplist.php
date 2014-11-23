@@ -5,7 +5,7 @@
 $con=mysqli_connect("localhost","root","Sandman1","test");
 // Check connection
 if (mysqli_connect_errno()) {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  echo "Uh-Oh, we can't find tips right now... If you're connected to the internet send us a bug report!" . mysqli_connect_error();
 }
 
 $result = mysqli_query($con,"SELECT * FROM tips1");

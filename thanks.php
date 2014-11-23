@@ -20,7 +20,7 @@ if (!mysqli_query($con,$sql)) {
 }
 echo "Thanks for the tip! <br>";
 while($row = mysqli_fetch_array($result)) {
-    echo "Share your tip with <a href=tips.php?id=".$row['uname'].">this link</a>";
+    echo "Share your tip with <a href=tips.php?id=".$row['name'].">this link</a>";
 }
 
 
