@@ -1,6 +1,6 @@
 <html><head><title>Pro-Tip</title>  <link rel="stylesheet" type="text/css" href="http://bootswatch.com/darkly/bootstrap.min.css"></head><body>
 <?php
-$con=mysqli_connect("localhost","root","Sandman","test");
+$con=mysqli_connect("localhost","root","foo","test");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Uh-Oh, we can't find the tip you're looking for... If you're connected to the internet send us a bug report!" . mysqli_connect_error();
