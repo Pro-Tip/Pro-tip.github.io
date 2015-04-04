@@ -1,0 +1,41 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="http://bootswatch.com/darkly/bootstrap.min.css">
+<style>
+body {
+    padding: 8% 10%;
+} 
+</style>
+</head>
+<body>
+<div>
+<form class="form-horizontal" action="thanks.php" method="post">
+<fieldset>  
+<legend>Submit a Tip</legend>
+    <div class="form-group">
+      <label for="Tip" class="col-lg-2 control-label">Tip</label>
+      <div class="col-lg-10">
+        <input class ="form-control" id="Tip" type="text" name="tip"><br><br>
+      </div>
+      
+      <label for="Description" class="col-lg-2 control-label">Description</label>
+      <div class="col-lg-10">
+        <input class ="form-control" id="Description" type="text" name="description"><br><br>
+      </div>
+      
+      <label for="Location" class="col-lg-2 control-label">Location</label>
+      <div class="col-lg-10">
+        <input class ="form-control" id="Location" type="text" name="location"><br><br>
+      </div>
+<div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+</div>
+    </div>
+</fieldset>
+</form>
+</div>
+</body>
+</html>
