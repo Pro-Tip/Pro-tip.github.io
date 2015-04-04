@@ -6,28 +6,17 @@ if (mysqli_connect_errno()) {
 }
 
 // escape variables for security
-$name = mysqli_real_escape_string($con, $_POST['uname']);
 $tip = mysqli_real_escape_string($con, $_POST['tip']);
 $description = mysqli_real_escape_string($con, $_POST['description']);
 $location = mysqli_real_escape_string($con, $_POST['location']);
-$type = mysqli_real_escape_string($con, $_POST['type']);
 
-$sql="INSERT INTO tips1 (username, tip, description, location, type)
-VALUES ('$name', '$tip', '$description', '$location', '$type')";
+$sql="INSERT INTO Tips (location, tip, description)
+VALUES ('$location', '$tip', '$description')";
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> bbe8f6d8e00efefd4a4e11ce9a520e55e761b91e
 if (!mysqli_query($con,$sql)) {
   die('Error: ' . mysqli_error($con));
 }
-echo "Thanks for the tip! <br>";
-while($row = mysqli_fetch_array($result)) {
-    echo "Share your tip with <a href=tips.php?id=".$row['name'].">this link</a>";
-}
-
+echo "<html><body><p>Thanks for the tip!</p> <br><br> <a href=\"index.html\">Go Home</a></body></html>";
 
 mysqli_close($con);
 ?>

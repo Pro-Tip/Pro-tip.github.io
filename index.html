@@ -1,24 +1,46 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="http://bootswatch.com/darkly/bootstrap.min.css">
+
+<style>
+body {
+    padding: 2cm 2cm 2cm 2cm;
+} 
+</style>
+
 </head>
 <body>
-<<<<<<< HEAD
+<div class="jumbotron">
+  <h1>Get Tips</h1>
+  <p>Find Tips for anywhere, just select your region below!</p>
+</div>
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Cities</th>
+      <th>Neighborhoods</th>
+      <th>Schools</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="tiplist.php?location=Houston">Houston</a></td>
+      <td><a href="tiplist.php?location=Westchase">Westchase</a></td>
+      <td><a href="tiplist.php?location=University of Houston">University of Houston</a></td>
+    </tr>
+    <tr>
+      <td><a href="tiplist.php?location=Katy">Katy</a></td>
+      <td><a href="tiplist.php?location=Bellaire">Bellaire</a></td>
+      <td><a href="tiplist.php?location=Rice">Rice</a></td>
+    </tr>
+  </tbody>
+</table> 
 
-<form action="thanks.php" method="post">
-Tip: <input type="text" name="tip"><br>
-Description: <input type="text" name="description"><br>
-Location: <input type="text" name="location"><br>
-<select type="text" name="type">
-<option value="food">Food</option>
-<option value="music">Music</option>
-<option value="stuff">Stuff</option>
-<option value="event">Event</option>
-</select>
-<input type="submit">
-</form>
+<div class="jumbotron">
+  <h1>Submit a Tip</h1>
+  <p><a href="submit.html">Share a tip with the world!</a></p>
+</div>
 
-<a href="tiplist.php">List of Tips</a>
 
 </body>
 </html>
