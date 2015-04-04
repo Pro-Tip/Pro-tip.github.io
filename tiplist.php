@@ -12,7 +12,7 @@ body {
 <body>
 
 <?php
-$con=mysqli_connect("localhost","root","Sandman","test");
+$con=mysqli_connect("localhost","root","foo","test");
 // Check connection
 if (mysqli_connect_errno()) {
   echo "Uh-Oh, we can't find tips right now... If you're connected to the internet send us a bug report!" . mysqli_connect_error();
